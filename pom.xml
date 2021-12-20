@@ -56,7 +56,7 @@
 				<executions>
 					<execution>
 						<goals>
-							<goal>findbugs</goal>
+							<goal>spotbugs</goal>
 						</goals>
 					</execution>
 				</executions>
