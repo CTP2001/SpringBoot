@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
     
+    @RequestMapping("/")
     public String hello(){
         return "Welcome to Milestone. This is Group 03";
     }
