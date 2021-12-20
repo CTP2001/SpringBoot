@@ -41,27 +41,27 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			
 			<plugin>
-                		<groupId>org.owasp</groupId>
-                		<artifactId>dependency-check-maven</artifactId>
-                		<version>6.5.1</version>
-                		<executions>
-                    			<execution>
-                        			<goals>
-                            				<goal>check</goal>
-                        			</goals>
-                    			</execution>
-                		</executions>
-                		<configuration>
-                    			<failBuildOnCVSS>7</failBuildOnCVSS>
-                    			<!-- Generate all report formats -->
-                    			<format>ALL</format>
-                    			<!-- Don't use Nexus Analyzer -->
-                    			<centralAnalyzerEnabled>false</centralAnalyzerEnabled>
-                    			<!-- Am I the latest version? -->
-                    			<versionCheckEnabled>true</versionCheckEnabled>
-                		</configuration>
-            		</plugin>
+  				<groupId>com.github.spotbugs</groupId>
+  				<artifactId>spotbugs-maven-plugin</artifactId>
+  				<version>4.5.0.0</version>
+  				<dependencies>
+    					<dependency>
+      						<groupId>com.github.spotbugs</groupId>
+      						<artifactId>spotbugs</artifactId>
+      						<version>4.5.2</version>
+    					</dependency>
+  				</dependencies>
+				<executions>
+					<execution>
+						<goals>
+							<goal>findbugs</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			
 		</plugins>
 	</build>
 
